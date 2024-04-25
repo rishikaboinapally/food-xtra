@@ -1,0 +1,133 @@
+<%- include("partials/header") -%>
+<div class="home-page">
+<section class="first-page">
+      <div class="head container-fluid">
+        <nav class="hpnavbar navbar navbar-expand-lg navbar-dark bg-dark">
+          <a href="#" class="navbar-brand feedly">FoodXTRA</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about-us">About Us</a></li>
+              <li><a class="nav-link" href="/login">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="sloganlm">
+        <h1 class="slogan">Donate<span> Deliver</span><span class="delite"> Delite</span></h1>
+        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#exampleModalLong">Learn More</button>
+        <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">About FoodXTRA</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              FOODXTRA© is a food donation application that connects NGOs to restaurants and
+              individuals. The purpose of this platform is to enable restaurants and individuals to donate
+              surplus food to people in need through partnering NGOs.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+</div>
+      </div>
+
+    </section>
+    <section class="items-list">
+    <h1 class="list-title">Restaurants registered with us</h1>
+      <div class="list">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card list-restaurants bg-light mb-3">
+              <div class="card-body">
+                <h5 class="card-title">Restaurants</h5>
+                  <ul class="list-group list-group-flush">
+                    <%doc.forEach(function(found){%>
+                      <li class="list-group-item"><%= found.name%></li>
+                    <%})%>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about-us" id="about-us">
+          <h1 class="abtusTitle">About Us</h1>
+          <div class="text-box">
+            <p>Our website is an initiative to redistribute unsold and excess food in restaurants to our needy people in NGOs so that there is reduced levels of wasting of food in our society. A shoutout to all restaurants to sign up for this so that you can distribute your food surplus to the needy and get yur CSR points right :)! and to all the NGOs so that you can collect food from the restaurants of your choice.</p>
+      <div class="text" style="font-size:20px;background-color: #eff6ef; /* dark green */;padding: 20px;border-radius: 10%;font-weight: bold;"><b>
+        <h2>#GetYourFoodTogether</h2>
+        <p>Our website is an initiative to redistribute unsold and excess food in restaurants to our needy people in NGOs so that
+          there is reduced levels of wasting of food in our society. A shoutout to all restaurants to sign up for this so that you
+          can distribute your food surplus to the needy and get yur CSR points right :)! and to all the NGOs so that you can collect
+          food from the restaurants of your choice</p></b>
+      </div>
+      <div class="our-focus" style="font-size:20px;background-color:#eff4ef; /* dark green */;padding: 20px;border-radius: 10%;font-weight: bold;"><b>
+        <h2>OUR FOCUS:</h2>
+        <p>In a report on food wastage caused by the hospitality industry is significantly increasing day by day. It is now
+        termed as one of the main cause of India's food waste problem. In order to reduce the food wastage that happens due to food surplus and unsold food,
+        we want to ensure that the unsold food is being distributed to the needy people who live in charity homes and to non-profit
+        NGO which services to thousands of poor orphans and elders. This initiative #ServeNeedy acts like a linking
+        bridge between Restraurants and NGOs, Charity homes to liase with each other and serve the needy.</p></b>
+
+      </div>
+
+    </section>
+
+    <section class="process-overview">
+      <h1>Process Overview</h1>
+      <div class="card-deck">
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h5 class="card-title">01</h5>
+            <p class="card-text">Restaurants update the details about that unsold every day through their account</p>
+          </div>
+        </div>
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h5 class="card-title">02</h5>
+            <p class="card-text">NGOs search for the restuarants of their choice and place their request.</p>
+          </div>
+        </div>
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h5 class="card-title">03</h5>
+            <p class="card-text">Upon checking,restaurants will confirm the same</p>
+          </div>
+        </div>
+        <div class="card bg-dark text-light">
+          <div class="card-body">
+            <h5 class="card-title">04</h5>
+            <p class="card-text">NGO may head to the restaurant to collect their food</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feedback" style="padding-bottom:2rem;background-color: white;padding-top: 2rem; width:50%;margin:auto;border-bottom: 2rem;
+    background-image: url(../Images/fee.png);border-radius: 0%;">
+      <div class="feedb">
+      <h2 style="text-align:left;margin:auto;">Your Feedback</h2><br>
+      <form action="mailto:FoodXtra@gmail.com" method="post" enctype="text/plain">
+      <div class="idkfbfield">
+        <label>Phone No:<br>
+        <input type="text"><br>
+        <label>E-mail<br>
+        <input type="text"><br>
+        <label>Message<br>
+        <input style="padding-left:0" type="text" name="Feedback" size="25"><br><br>
+      </div>
+        <input style="text-align: center; margin:auto;" class="btn btn-secondary" type="submit" value="Send">
+        </form>
+      </div>
+    </section><br><br>
+    </div>
+<%- include("partials/footer") -%>
